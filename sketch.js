@@ -5,7 +5,7 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 var gameoverImg, gameover, restartImg, restart;
 var score;
 var gameState;
-
+//Commit 3
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
@@ -29,7 +29,8 @@ function setup() {
   
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
-  trex.scale = 0.5;
+  trex.scale = 0.5;  
+
 
   gameover = createSprite(300,100,10,10);
   gameover.visible = false;
@@ -115,11 +116,7 @@ function spawnClouds() {
 }
 
 function spawnObstacles() {
-<<<<<<< HEAD
-  if(frameCount % 1 === 0) {
-=======
   if(frameCount % 60 === 0 && gameState == "play") {
->>>>>>> Updated sketch.js
     var obstacle = createSprite(600,165,10,40);
     obstacle.velocityX = -6;
     
