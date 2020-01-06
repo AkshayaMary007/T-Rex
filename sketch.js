@@ -31,7 +31,6 @@ function setup() {
   trex.addAnimation("running", trex_running);
   trex.scale = 0.5;  
 
-
   gameover = createSprite(300,100,10,10);
   gameover.visible = false;
   gameover.addImage("gameover",gameoverImg);
