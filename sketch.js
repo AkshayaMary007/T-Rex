@@ -5,9 +5,8 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 var gameoverImg, gameover, restartImg, restart;
 var score;
 var gameState;
-//Commit 3
 
-function preload(){
+function preload() {
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
   trex_collided = loadImage("trex_collided.png");
   gameState = "play";
@@ -42,8 +41,8 @@ function setup() {
   ground = createSprite(200,180,400,20);
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
-  ground.velocityX = -6;
-  
+	ground.velocityX = -6;
+	
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
   
@@ -144,5 +143,5 @@ function spawnObstacles() {
     }
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
-  }
+	}
 }
