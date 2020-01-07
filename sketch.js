@@ -77,6 +77,7 @@ function draw() {
     cloudsGroup.setVelocityXEach(0);
     gameover.visible = true;
     restart.visible = true;
+    trex.velocityY = 0;
     if(mousePressedOver(restart)) {
       obstaclesGroup.destroyEach()
       cloudsGroup.destroyEach();
