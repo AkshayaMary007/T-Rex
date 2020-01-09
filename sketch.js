@@ -116,6 +116,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0 && gameState == "play") {
+    
     var obstacle = createSprite(600,165,10,40);
     obstacle.velocityX = -6;
     
@@ -142,6 +143,7 @@ function spawnObstacles() {
     if(obstacle.x < 0) {
       obstacle.destroy(); 
     }
+
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
 	}
