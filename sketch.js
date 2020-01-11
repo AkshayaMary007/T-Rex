@@ -71,6 +71,7 @@ function draw() {
       gameState = "end";
     } 
   }
+
   if(gameState === "end") { 
     ground.velocityX = 0;
     obstaclesGroup.setVelocityXEach(0);
