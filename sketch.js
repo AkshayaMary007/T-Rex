@@ -79,6 +79,7 @@ function draw() {
     gameover.visible = true;
     restart.visible = true;
     trex.velocityY = 0;
+    trex.addImage("collided",trex_collided);
     if(mousePressedOver(restart)) {
       obstaclesGroup.destroyEach()
       cloudsGroup.destroyEach();
