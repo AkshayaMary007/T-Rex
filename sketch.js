@@ -8,7 +8,7 @@ var gameState;
 
 function preload() {
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
-  trex_collided = loadImage("trex_collided.png");
+  trex_collided = loadAnimation("trex_collided.png");
   gameState = "play";
   groundImage = loadImage("ground2.png");
   gameoverImg = loadImage("gameOver.png");
@@ -28,6 +28,7 @@ function setup() {
   
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
+  trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;  
 
   gameover = createSprite(300,100,10,10);
@@ -79,7 +80,7 @@ function draw() {
     gameover.visible = true;
     restart.visible = true;
     trex.velocityY = 0;
-    trex.addImage(trex_collided);
+    trex.changeAnimation("collided", trex_collided);
     if(mousePressedOver(restart)) {
       obstaclesGroup.destroyEach()
       cloudsGroup.destroyEach();
