@@ -86,6 +86,7 @@ function draw() {
       cloudsGroup.destroyEach();
       score = 0;
       ground.velocityX = -6;
+      trex.changeAnimation("running", trex_running);
       gameover.visible = false;
       restart.visible = false;
       gameState = "play";
